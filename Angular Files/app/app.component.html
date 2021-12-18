@@ -1,0 +1,41 @@
+
+<div style="background-color:rgb(163, 228, 163);">
+<h1 style="text-align: center;">
+  Spring-Angular-App
+</h1>
+<br/><br/>
+&nbsp;
+
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label"></label>&nbsp;
+    <input class="col-xs-2" id="exampleInputEmail1" [(ngModel)]='movieid' type="text" name="movieID" placeholder="Enter Movie ID...">
+    <div id="emailHelp" class="form-text">&nbsp;The Movie details will be fetched from The Movie DB.</div>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button style="text-align: center;" type="button" class="btn btn-success" (click)='getAllMovies()'>Get Movie</button>
+</form>
+
+
+
+
+<table class="table mt-5">
+  <thead>
+    <tr>
+      <td> MovieID</td>
+      <td>status</td>
+      <td>Overview</td>
+      <td>Title</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let movie of movies'>
+      <td>{{movie.movieId}}</td>
+      <td>{{movie.status}}</td>
+      <td>{{movie.overview}}</td>
+      <td>{{movie.title}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
